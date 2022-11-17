@@ -50,7 +50,7 @@ namespace SalesWinApp
             this.fstoreManagementToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 4);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(60, 455);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
@@ -74,7 +74,7 @@ namespace SalesWinApp
             // 
             this.orderManagementToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.orderManagementToolStripMenuItem.Name = "orderManagementToolStripMenuItem";
-            this.orderManagementToolStripMenuItem.Size = new System.Drawing.Size(458, 50);
+            this.orderManagementToolStripMenuItem.Size = new System.Drawing.Size(289, 30);
             this.orderManagementToolStripMenuItem.Text = "Order Management";
             this.orderManagementToolStripMenuItem.Click += new System.EventHandler(this.orderManagementToolStripMenuItem_Click);
             // 
@@ -82,7 +82,7 @@ namespace SalesWinApp
             // 
             this.productManagementToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.productManagementToolStripMenuItem.Name = "productManagementToolStripMenuItem";
-            this.productManagementToolStripMenuItem.Size = new System.Drawing.Size(458, 50);
+            this.productManagementToolStripMenuItem.Size = new System.Drawing.Size(289, 30);
             this.productManagementToolStripMenuItem.Text = "Product Management";
             this.productManagementToolStripMenuItem.Click += new System.EventHandler(this.productManagementToolStripMenuItem_Click);
             // 
@@ -90,7 +90,7 @@ namespace SalesWinApp
             // 
             this.memberManagementToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.memberManagementToolStripMenuItem.Name = "memberManagementToolStripMenuItem";
-            this.memberManagementToolStripMenuItem.Size = new System.Drawing.Size(458, 50);
+            this.memberManagementToolStripMenuItem.Size = new System.Drawing.Size(289, 30);
             this.memberManagementToolStripMenuItem.Text = "Member Management";
             this.memberManagementToolStripMenuItem.Click += new System.EventHandler(this.memberManagementToolStripMenuItem_Click);
             // 
@@ -100,10 +100,10 @@ namespace SalesWinApp
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label4.Location = new System.Drawing.Point(283, 326);
-            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label4.Location = new System.Drawing.Point(174, 204);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(599, 87);
+            this.label4.Size = new System.Drawing.Size(379, 54);
             this.label4.TabIndex = 12;
             this.label4.Text = "MANAGEMENT";
             // 
@@ -111,9 +111,10 @@ namespace SalesWinApp
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::SalesWinApp.Properties.Resources.fpt_university_logo_B3B6D84292_seeklogo_com;
-            this.pictureBox2.Location = new System.Drawing.Point(505, 35);
+            this.pictureBox2.Location = new System.Drawing.Point(311, 22);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(179, 83);
+            this.pictureBox2.Size = new System.Drawing.Size(110, 52);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 11;
             this.pictureBox2.TabStop = false;
@@ -124,28 +125,28 @@ namespace SalesWinApp
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 45F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label1.Location = new System.Drawing.Point(355, 151);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Location = new System.Drawing.Point(218, 94);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(455, 139);
+            this.label1.Size = new System.Drawing.Size(288, 87);
             this.label1.TabIndex = 10;
             this.label1.Text = "FStore";
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::SalesWinApp.Properties.Resources.png_transparent_starry_night_desktop_display_resolution_night_1080p_high_definition_television_best_snowflakes_falling_miscellaneous_atmosphere_computer_wallpaper;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1123, 455);
+            this.ClientSize = new System.Drawing.Size(698, 455);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.ForeColor = System.Drawing.Color.Coral;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(6);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMain";

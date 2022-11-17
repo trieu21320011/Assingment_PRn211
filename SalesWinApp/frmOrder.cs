@@ -41,8 +41,7 @@ namespace SalesWinApp
             {
                 LoadOrderListDetail();
                 btnAdd.Enabled = false;
-                btnDelete.Enabled = false;
-                dgvOrderList.Enabled = false;
+                btnDelete.Enabled = false;               
                 dtpMax.Enabled = false;
                 dtpMin.Enabled = false;
             }
@@ -239,7 +238,8 @@ namespace SalesWinApp
                 Text = "Order",
                 InsertOrUpdate = true,
                 OrderInfo = GetOrderInfo(),
-                OrderRepository = orderRepository
+                OrderRepository = orderRepository,
+                EmailLogin = EmailLogin
             };
             if (frmOrderDetail.ShowDialog() == DialogResult.OK)
             {
@@ -332,6 +332,27 @@ namespace SalesWinApp
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnLoadData_Click(object sender, EventArgs e)
+        {
+            if (!EmailLogin.Equals("admin@fstore.com"))
+            {
+                LoadOrderListDetail();
+                btnAdd.Enabled = false;
+                btnDelete.Enabled = false;
+                dtpMax.Enabled = false;
+                dtpMin.Enabled = false;
+            }
+            else
+            {
+                LoadOrderList();
+            }
+        }
+
+        private void dgvOrderList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

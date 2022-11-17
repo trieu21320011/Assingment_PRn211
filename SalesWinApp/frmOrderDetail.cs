@@ -21,6 +21,8 @@ namespace SalesWinApp
         public Boolean InsertOrUpdate { get; set; }
         public Order OrderInfo { get; set; }
 
+        public string EmailLogin { get; set; }
+
         BindingSource source;
 
         public frmOrderDetail()
@@ -31,8 +33,6 @@ namespace SalesWinApp
         private void frmOrderDetail_Load(object sender, EventArgs e)
         {
             var members = MemberRepository.GetMembers();
-
-
             foreach (var member in members)
             {
                 cmbMember.Items.Add(member.MemberId);
@@ -40,31 +40,68 @@ namespace SalesWinApp
 
             }
 
-            if (InsertOrUpdate == true)
+            if (EmailLogin.Equals("admin@fstore.com"))
             {
-                txtId.Text = OrderInfo.OrderId.ToString();
-                txtId.ReadOnly = true;
-                btnCancel.Enabled = false;
-                btnCancel.Visible = false;
-
-                dtpOrder.Value = OrderInfo.OrderDate;
-                if (OrderInfo.RequiredDate.HasValue)
+                if (InsertOrUpdate == true)
                 {
-                    dtpRequire.Value = OrderInfo.RequiredDate.Value;
-                }
-                if (OrderInfo.ShippedDate.HasValue)
-                {
-                    dtpShipped.Value = OrderInfo.ShippedDate.Value;
-                }
+                    txtId.Text = OrderInfo.OrderId.ToString();
+                    txtId.ReadOnly = true;
+                    btnCancel.Enabled = false;
+                    btnCancel.Visible = false;
 
-                txtFreight.Text = OrderInfo.Freight.ToString();
+                    dtpOrder.Value = OrderInfo.OrderDate;
+                    if (OrderInfo.RequiredDate.HasValue)
+                    {
+                        dtpRequire.Value = OrderInfo.RequiredDate.Value;
+                    }
+                    if (OrderInfo.ShippedDate.HasValue)
+                    {
+                        dtpShipped.Value = OrderInfo.ShippedDate.Value;
+                    }
+
+                    txtFreight.Text = OrderInfo.Freight.ToString();
+                }
+                else
+                {
+                    dgvDetail.Enabled = false;
+                    btnAdd.Enabled = false;
+                }
+                LoadDetailList();
+
             }
             else
             {
-                dgvDetail.Enabled = false;
-                btnAdd.Enabled = false;
+                
+                    txtId.Text = OrderInfo.OrderId.ToString();
+                    txtId.ReadOnly = true;
+                    btnCancel.Enabled = false;
+                    btnCancel.Visible = false;
+                    dgvDetail.Enabled = false;
+                    btnAdd.Enabled = false;
+                    btnDelete.Enabled = false;
+                    btnAdd.Enabled = false;
+                    btnSave.Enabled = false;
+                    
+
+                dtpOrder.Value = OrderInfo.OrderDate;
+                    if (OrderInfo.RequiredDate.HasValue)
+                    {
+                        dtpRequire.Value = OrderInfo.RequiredDate.Value;
+                    }
+                    if (OrderInfo.ShippedDate.HasValue)
+                    {
+                        dtpShipped.Value = OrderInfo.ShippedDate.Value;
+                    }
+
+                    txtFreight.Text = OrderInfo.Freight.ToString();                         
+                LoadDetailList();
+
             }
-            LoadDetailList();
+                
+
+            
+
+            
         }
 
         private OrderDetail GetOrderDetailInfo()
@@ -133,7 +170,11 @@ namespace SalesWinApp
                 }
                 else
                 {
-                    btnDelete.Enabled = true;
+                    if (EmailLogin.Equals("admin@fstore.com"))
+                    {
+                        btnDelete.Enabled = true;
+                    }
+                        
                 }
             }
             catch (Exception ex)
