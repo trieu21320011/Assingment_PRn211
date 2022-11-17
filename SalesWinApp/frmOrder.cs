@@ -50,7 +50,7 @@ namespace SalesWinApp
             {
                 LoadOrderList();
             }
-            
+
         }
 
         private void ClearText()
@@ -257,8 +257,13 @@ namespace SalesWinApp
             try
             {
                 var order = GetOrderInfo();
-                orderRepository.DeleteOrder(order.OrderId);
-                LoadOrderList();
+                DialogResult dialogResult = MessageBox.Show($"Do you want to delete order {order.OrderId} ?", "Delete", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    orderRepository.DeleteOrder(order.OrderId);
+                    LoadOrderList();
+                }
+
             }
             catch (Exception ex)
             {
@@ -310,14 +315,16 @@ namespace SalesWinApp
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            if (EmailLogin.Equals("admin@fstore.com")) {
+            if (EmailLogin.Equals("admin@fstore.com"))
+            {
                 LoadOrderListByDate();
             }
         }
 
         private void dtpMax_ValueChanged(object sender, EventArgs e)
         {
-            if (EmailLogin.Equals("admin@fstore.com")) {
+            if (EmailLogin.Equals("admin@fstore.com"))
+            {
                 LoadOrderListByDate();
             }
         }

@@ -120,6 +120,7 @@ namespace SalesWinApp
                 {
                     throw new Exception("Fields can't empty!");
                 }
+                checkInput(txtID.Text.Trim(), txtCompany.Text.Trim(), txtCity.Text.Trim(), txtCountry.Text.Trim(), txtEmail.Text.Trim());
                 var member = new Member
                 {
                     MemberId = Int32.Parse(txtID.Text),
@@ -129,14 +130,16 @@ namespace SalesWinApp
                     Country = txtCountry.Text,
                     Password = txtPassword.Text
                 };
+
                 if (InsertOrUpdate == false)
                 {
-                    checkInput(txtID.Text.Trim(), txtCompany.Text.Trim(), txtCity.Text.Trim(), txtCountry.Text.Trim(), txtEmail.Text.Trim());
+                    
                     MemberRepository.InsertMember(member);
 
                     Close();
                 }
                 else
+
                 {
                     MemberRepository.UpdateMember(member);
                     Close();
@@ -161,6 +164,11 @@ namespace SalesWinApp
         private void label10_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

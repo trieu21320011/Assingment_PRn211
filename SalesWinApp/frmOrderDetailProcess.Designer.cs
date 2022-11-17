@@ -48,7 +48,7 @@ namespace SalesWinApp
             // 
             this.txtId.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtId.Location = new System.Drawing.Point(287, 145);
-            this.txtId.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtId.Margin = new System.Windows.Forms.Padding(6);
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
             this.txtId.Size = new System.Drawing.Size(370, 57);
@@ -61,7 +61,7 @@ namespace SalesWinApp
             this.cmbProduct.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cmbProduct.FormattingEnabled = true;
             this.cmbProduct.Location = new System.Drawing.Point(287, 263);
-            this.cmbProduct.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cmbProduct.Margin = new System.Windows.Forms.Padding(6);
             this.cmbProduct.Name = "cmbProduct";
             this.cmbProduct.Size = new System.Drawing.Size(370, 58);
             this.cmbProduct.TabIndex = 3;
@@ -71,7 +71,7 @@ namespace SalesWinApp
             // 
             this.txtPrice.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtPrice.Location = new System.Drawing.Point(287, 388);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(6);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(370, 57);
             this.txtPrice.TabIndex = 5;
@@ -81,7 +81,7 @@ namespace SalesWinApp
             // 
             this.txtQuantity.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtQuantity.Location = new System.Drawing.Point(287, 518);
-            this.txtQuantity.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(6);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(370, 57);
             this.txtQuantity.TabIndex = 7;
@@ -91,7 +91,7 @@ namespace SalesWinApp
             // 
             this.txtDiscount.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtDiscount.Location = new System.Drawing.Point(287, 655);
-            this.txtDiscount.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtDiscount.Margin = new System.Windows.Forms.Padding(6);
             this.txtDiscount.Name = "txtDiscount";
             this.txtDiscount.Size = new System.Drawing.Size(370, 57);
             this.txtDiscount.TabIndex = 9;
@@ -103,7 +103,7 @@ namespace SalesWinApp
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSave.Location = new System.Drawing.Point(176, 784);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(6);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(170, 60);
             this.btnSave.TabIndex = 10;
@@ -117,7 +117,7 @@ namespace SalesWinApp
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCancel.Location = new System.Drawing.Point(390, 784);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(6);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(170, 60);
             this.btnCancel.TabIndex = 11;
@@ -224,7 +224,7 @@ namespace SalesWinApp
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.cmbProduct);
             this.Controls.Add(this.txtId);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmOrderDetailProcess";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Order Detail Process";

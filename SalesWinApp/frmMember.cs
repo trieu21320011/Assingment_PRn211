@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Contracts;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -152,8 +153,14 @@ namespace SalesWinApp
             try
             {
                 var member = GetMemberInfo();
-                memberRepository.DeleteMember(member.MemberId);
-                LoadMemberList();
+                
+                DialogResult dialogResult = MessageBox.Show($"Do you want to delete member {member.MemberId} ?", "Delete", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    memberRepository.DeleteMember(member.MemberId);
+                    LoadMemberList();
+                }
+                
             }
             catch (Exception ex)
             {
@@ -177,7 +184,7 @@ namespace SalesWinApp
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
     }
 }

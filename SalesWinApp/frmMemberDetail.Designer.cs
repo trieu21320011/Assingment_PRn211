@@ -52,12 +52,13 @@ namespace SalesWinApp
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCancel.Location = new System.Drawing.Point(540, 908);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(6);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(150, 60);
             this.btnCancel.TabIndex = 27;
             this.btnCancel.Text = "&Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
             // 
@@ -65,7 +66,7 @@ namespace SalesWinApp
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSave.Location = new System.Drawing.Point(367, 908);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(6);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(150, 60);
             this.btnSave.TabIndex = 26;
@@ -77,8 +78,9 @@ namespace SalesWinApp
             // 
             this.txtID.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtID.Location = new System.Drawing.Point(323, 161);
-            this.txtID.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtID.Margin = new System.Windows.Forms.Padding(6);
             this.txtID.Name = "txtID";
+            this.txtID.PlaceholderText = "1";
             this.txtID.Size = new System.Drawing.Size(441, 57);
             this.txtID.TabIndex = 15;
             this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
@@ -129,6 +131,7 @@ namespace SalesWinApp
             this.txtEmail.Location = new System.Drawing.Point(323, 280);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(6);
             this.txtEmail.Name = "txtEmail";
+            this.txtEmail.PlaceholderText = "abc@gmail.com";
             this.txtEmail.Size = new System.Drawing.Size(441, 57);
             this.txtEmail.TabIndex = 31;
             // 
@@ -151,6 +154,7 @@ namespace SalesWinApp
             this.txtCompany.Location = new System.Drawing.Point(323, 404);
             this.txtCompany.Margin = new System.Windows.Forms.Padding(6);
             this.txtCompany.Name = "txtCompany";
+            this.txtCompany.PlaceholderText = "abc";
             this.txtCompany.Size = new System.Drawing.Size(441, 57);
             this.txtCompany.TabIndex = 33;
             // 
@@ -173,6 +177,7 @@ namespace SalesWinApp
             this.txtCity.Location = new System.Drawing.Point(323, 534);
             this.txtCity.Margin = new System.Windows.Forms.Padding(6);
             this.txtCity.Name = "txtCity";
+            this.txtCity.PlaceholderText = "abc";
             this.txtCity.Size = new System.Drawing.Size(441, 57);
             this.txtCity.TabIndex = 35;
             // 
@@ -195,6 +200,7 @@ namespace SalesWinApp
             this.txtCountry.Location = new System.Drawing.Point(323, 671);
             this.txtCountry.Margin = new System.Windows.Forms.Padding(6);
             this.txtCountry.Name = "txtCountry";
+            this.txtCountry.PlaceholderText = "abc";
             this.txtCountry.Size = new System.Drawing.Size(441, 57);
             this.txtCountry.TabIndex = 37;
             // 
@@ -217,6 +223,7 @@ namespace SalesWinApp
             this.txtPassword.Location = new System.Drawing.Point(323, 801);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(6);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PlaceholderText = "***";
             this.txtPassword.Size = new System.Drawing.Size(441, 57);
             this.txtPassword.TabIndex = 39;
             // 
@@ -243,7 +250,7 @@ namespace SalesWinApp
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtID);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "frmMemberDetail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Member Detail";

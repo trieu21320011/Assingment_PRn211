@@ -126,7 +126,7 @@ namespace SalesWinApp
             this.dgvDetail.ReadOnly = true;
             this.dgvDetail.RowHeadersWidth = 82;
             this.dgvDetail.RowTemplate.Height = 25;
-            this.dgvDetail.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect;
+            this.dgvDetail.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDetail.Size = new System.Drawing.Size(1060, 457);
             this.dgvDetail.TabIndex = 12;
             this.dgvDetail.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetail_CellDoubleClick);
@@ -157,6 +157,7 @@ namespace SalesWinApp
             this.btnCancel.TabIndex = 14;
             this.btnCancel.Text = "&Cancel";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnAdd
             // 

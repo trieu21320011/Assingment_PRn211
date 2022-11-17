@@ -85,9 +85,11 @@ namespace SalesWinApp
             this.dtpMax.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpMax.Location = new System.Drawing.Point(589, 193);
             this.dtpMax.Margin = new System.Windows.Forms.Padding(6);
+            this.dtpMax.MaxDate = new System.DateTime(2022, 11, 17, 0, 0, 0, 0);
             this.dtpMax.Name = "dtpMax";
             this.dtpMax.Size = new System.Drawing.Size(265, 47);
             this.dtpMax.TabIndex = 36;
+            this.dtpMax.Value = new System.DateTime(2022, 11, 17, 0, 0, 0, 0);
             this.dtpMax.ValueChanged += new System.EventHandler(this.dtpMax_ValueChanged);
             // 
             // btnDelete
