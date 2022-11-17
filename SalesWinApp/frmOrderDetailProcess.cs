@@ -70,18 +70,65 @@ namespace SalesWinApp
                 txtId.Text = OrderId.ToString(); 
             }
         }
+        private void checkInput(string orderID, string unitPrice, string quantity, string discount)
+        {
+            var isInt = int.TryParse(orderID, out _);
 
+            if (orderID.Length == 0)
+            {
+                throw new Exception("OrderID can not null");
+
+            }
+            
+            if (isInt == false)
+            {
+                throw new Exception("OrderID must be Int type");
+            }
+            if (unitPrice.Length == 0)
+            {
+                throw new Exception("Unit pricew can not null");
+
+            }
+            var isDecimal = decimal.TryParse(unitPrice, out _);
+            if (isDecimal == false)
+            {
+                throw new Exception("Unit price must be a decimal");
+            }
+            isInt = int.TryParse(quantity, out _);
+            if (quantity.Length == 0)
+            {
+                throw new Exception("Quantity can not null");
+
+            }
+            if (isInt == false)
+            {
+                throw new Exception("Quantity must be Int type");
+            }
+            var isDouble = double.TryParse(discount, out _);
+
+            if (discount.Length == 0)
+            {
+                throw new Exception("Discount can not null");
+
+            }
+            if (isDouble == false)
+            {
+                throw new Exception("Discount must be double type");
+            }
+
+        }
         private void btnSave_Click(object sender, EventArgs e)
         {
             try
             {
+                checkInput(txtId.Text, txtPrice.Text, txtQuantity.Text, txtDiscount.Text);
                 var orderDetail = new OrderDetail
                 {
                     OrderId = Int32.Parse(txtId.Text),
                     ProductId = Int32.Parse(cmbProduct.SelectedValue.ToString().Trim()),
                     UnitPrice = Decimal.Parse(txtPrice.Text),
                     Quantity = Int32.Parse(txtQuantity.Text),
-                    Discount = Int32.Parse(txtDiscount.Text)
+                    Discount = Double.Parse(txtDiscount.Text)
                 };
                 if (InsertOrUpdate == false)
                 {
@@ -101,6 +148,56 @@ namespace SalesWinApp
         }
 
         private void cmbProduct_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void txtDiscount_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtQuantity_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPrice_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

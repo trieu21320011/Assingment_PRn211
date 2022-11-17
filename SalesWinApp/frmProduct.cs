@@ -326,8 +326,14 @@ namespace SalesWinApp
             try
             {
                 var product = GetProductInfo();
-                productRepository.DeleteProduct(product.ProductId);
-                LoadProductList();
+                DialogResult dialogResult = MessageBox.Show($"Do you want to delete product {product.ProductName} ?", "Delete", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    productRepository.DeleteProduct(product.ProductId);
+                    LoadProductList();
+                }
+                
+               
             }
             catch (Exception ex)
             {

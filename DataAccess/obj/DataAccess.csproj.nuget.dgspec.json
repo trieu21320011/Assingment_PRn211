@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ASUS\\Downloads\\Ass02Solution-20221105T022237Z-001\\Ass02Solution\\DataAccess\\DataAccess.csproj": {}
+    "C:\\PRN211\\.vs\\Assingment_PRn211\\DataAccess\\DataAccess.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ASUS\\Downloads\\Ass02Solution-20221105T022237Z-001\\Ass02Solution\\BusinessObject\\BusinessObject.csproj": {
+    "C:\\PRN211\\.vs\\Assingment_PRn211\\BusinessObject\\BusinessObject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\Downloads\\Ass02Solution-20221105T022237Z-001\\Ass02Solution\\BusinessObject\\BusinessObject.csproj",
+        "projectUniqueName": "C:\\PRN211\\.vs\\Assingment_PRn211\\BusinessObject\\BusinessObject.csproj",
         "projectName": "BusinessObject",
-        "projectPath": "C:\\Users\\ASUS\\Downloads\\Ass02Solution-20221105T022237Z-001\\Ass02Solution\\BusinessObject\\BusinessObject.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\Downloads\\Ass02Solution-20221105T022237Z-001\\Ass02Solution\\BusinessObject\\obj\\",
+        "projectPath": "C:\\PRN211\\.vs\\Assingment_PRn211\\BusinessObject\\BusinessObject.csproj",
+        "packagesPath": "C:\\Users\\thien\\.nuget\\packages\\",
+        "outputPath": "C:\\PRN211\\.vs\\Assingment_PRn211\\BusinessObject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\thien\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -67,7 +67,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -76,21 +77,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ASUS\\Downloads\\Ass02Solution-20221105T022237Z-001\\Ass02Solution\\DataAccess\\DataAccess.csproj": {
+    "C:\\PRN211\\.vs\\Assingment_PRn211\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\Downloads\\Ass02Solution-20221105T022237Z-001\\Ass02Solution\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\PRN211\\.vs\\Assingment_PRn211\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\ASUS\\Downloads\\Ass02Solution-20221105T022237Z-001\\Ass02Solution\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\Downloads\\Ass02Solution-20221105T022237Z-001\\Ass02Solution\\DataAccess\\obj\\",
+        "projectPath": "C:\\PRN211\\.vs\\Assingment_PRn211\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\thien\\.nuget\\packages\\",
+        "outputPath": "C:\\PRN211\\.vs\\Assingment_PRn211\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\thien\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -104,8 +105,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\ASUS\\Downloads\\Ass02Solution-20221105T022237Z-001\\Ass02Solution\\BusinessObject\\BusinessObject.csproj": {
-                "projectPath": "C:\\Users\\ASUS\\Downloads\\Ass02Solution-20221105T022237Z-001\\Ass02Solution\\BusinessObject\\BusinessObject.csproj"
+              "C:\\PRN211\\.vs\\Assingment_PRn211\\BusinessObject\\BusinessObject.csproj": {
+                "projectPath": "C:\\PRN211\\.vs\\Assingment_PRn211\\BusinessObject\\BusinessObject.csproj"
               }
             }
           }
@@ -147,7 +148,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -156,7 +158,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

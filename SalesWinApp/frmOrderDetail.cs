@@ -150,11 +150,45 @@ namespace SalesWinApp
             txtQuantity.Text = string.Empty;
             txtDiscount.Text = string.Empty;
         }
+        private void checkInput(string orderID,DateTime orderDate, DateTime requiredDate, DateTime shippedDate, string freight)
+        {
+            var isInt = int.TryParse(orderID, out _);
+           
+            if(orderID.Length == 0)
+            {
+                throw new Exception("OrderID can not null");
+           
+            }
+            if(isInt == false)
+            {
+                throw new Exception("OrderID must be Int type");
+            }
+            if (DateTime.Compare(requiredDate, orderDate) < 0)
+            {
+                throw new Exception("Required date must be later than order date");
+            }
+            if (DateTime.Compare(shippedDate, requiredDate) < 0)
+            {
+                throw new Exception("Shipped date must be later than required date");
+
+            }
+            if (freight.Length == 0)
+            {
+                throw new Exception("Freight can not null");
+
+            }
+            var isDecimal = decimal.TryParse(freight, out _);
+            if (isDecimal == false)
+            {
+                throw new Exception("Freight must be a decimal");
+            }
+        }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             try
             {
+                checkInput(txtId.Text, dtpOrder.Value, dtpRequire.Value, dtpShipped.Value, txtFreight.Text);
                 var order = new Order
                 {
                     OrderId = Int32.Parse(txtId.Text),
@@ -228,13 +262,24 @@ namespace SalesWinApp
             try
             {
                 var orderDetail = GetOrderDetailInfo();
-                OrderDetailRepository.DeleteOrderDetail(orderDetail.OrderId, orderDetail.ProductId);
-                LoadDetailList();
+                DialogResult dialogResult = MessageBox.Show($"Do you want to delete this ?", "Delete", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    OrderDetailRepository.DeleteOrderDetail(orderDetail.OrderId, orderDetail.ProductId);
+                    LoadDetailList();
+                }
+                
+                
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Delete a order detail");
             }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

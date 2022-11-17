@@ -47,18 +47,45 @@ namespace SalesWinApp
                 txtWeight.Text = ProductInfo.Weight.ToString();
             }
         }
+        private void checkInput(string productId, string productName, string categoryId, string unitPrice, string weight, string unitInstock)
+        {
+            var isInt = int.TryParse(productId, out _);
+            if (isInt == false)
+            {
+                throw new Exception("ProductID must be Int type");
+            }
+            isInt = int.TryParse(categoryId, out _);
+            if (isInt == false)
+            {
+                throw new Exception("Category must be Int type");
+            }
+            if(!(productName.Length > 0 && productName.Length <= 50)){
+                throw new Exception("Product name is in the range 0-50 characters");
+            }
+            var isDecimal = decimal.TryParse(unitPrice, out _);
+            if (isDecimal == false)
+            {
+                throw new Exception("Unit price must be a decimal");
+            }
+            isInt = int.TryParse(unitInstock, out _);
+            if (isInt == false)
+            {
+                throw new Exception("Unit stock must be Int type");
+            }
+        }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             try
             {
-
+                
                 if (String.IsNullOrEmpty(txtName.Text.Trim()) ||
                     String.IsNullOrEmpty(txtWeight.Text.Trim()))
                    
                 {
                     throw new Exception("Fields can't empty!");
                 }
+                checkInput(txtID.Text, txtName.Text, txtCate.Text, txtPrice.Text, txtWeight.Text, txtStock.Text);
                 var product = new Product
                 {
                     ProductId = Int32.Parse(txtID.Text),
