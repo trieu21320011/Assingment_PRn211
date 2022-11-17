@@ -18,6 +18,7 @@ namespace SalesWinApp
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmLogin());
+            int i = 1;
         }
     }
 }
