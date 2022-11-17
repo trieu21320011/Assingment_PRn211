@@ -27,7 +27,8 @@ namespace DataLayer
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("server =Triệu; database = Assignment2_PRN211;uid=trieu;pwd=2;");
+                optionsBuilder.UseSqlServer("Server=18.136.108.204;uid=admin;pwd=Nguyenduy111;database=Assignment2_PRN211; " +
+                    "TrustServerCertificate=true");
             }
         }
 
