@@ -29,7 +29,7 @@ namespace DataAccess
                 }
             }
         }
-
+        /*trieu teas*/
         public List<Order> GetOrderList() => DBContext.Orders.ToList();
         public Order GetOrderByID(int orderID) => DBContext.Orders.Find(orderID);
         public void AddNew(Order order)

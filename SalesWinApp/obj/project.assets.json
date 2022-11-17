@@ -5843,11 +5843,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ASUS\\Downloads\\Ass02Solution-20221105T022237Z-001\\Ass02Solution\\SalesWinApp\\SalesWinApp.csproj",
+      "projectUniqueName": "C:\\Users\\ASUS\\Downloads\\test_demo\\Assingment_PRn211\\SalesWinApp\\SalesWinApp.csproj",
       "projectName": "SalesWinApp",
-      "projectPath": "C:\\Users\\ASUS\\Downloads\\Ass02Solution-20221105T022237Z-001\\Ass02Solution\\SalesWinApp\\SalesWinApp.csproj",
+      "projectPath": "C:\\Users\\ASUS\\Downloads\\test_demo\\Assingment_PRn211\\SalesWinApp\\SalesWinApp.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ASUS\\Downloads\\Ass02Solution-20221105T022237Z-001\\Ass02Solution\\SalesWinApp\\obj\\",
+      "outputPath": "C:\\Users\\ASUS\\Downloads\\test_demo\\Assingment_PRn211\\SalesWinApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5864,8 +5864,8 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
-            "C:\\Users\\ASUS\\Downloads\\Ass02Solution-20221105T022237Z-001\\Ass02Solution\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\ASUS\\Downloads\\Ass02Solution-20221105T022237Z-001\\Ass02Solution\\DataAccess\\DataAccess.csproj"
+            "C:\\Users\\ASUS\\Downloads\\test_demo\\Assingment_PRn211\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\ASUS\\Downloads\\test_demo\\Assingment_PRn211\\DataAccess\\DataAccess.csproj"
             }
           }
         }
